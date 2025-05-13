@@ -10,8 +10,18 @@ not go beyond the bounds of the chessboard
 (x - 1 , y - 2)
 */
 
-function knightMoves(start, target) {
-    // possible moves from any given position
+// X/Y cannot be greater than 7 or less than 0. 
+function isValidPosition(x, y) {
+  return x >= 0 && x <= 7 && y >= 0 && y <= 7;
+}
+
+function knightMoves([startX, startY], [targetX, targetY]) {
+    // make sure we have valid input before any other nonsense takes place
+    if (isValidPosition(startX, startY) === false || isValidPosition(targetX, targetY) === false) {
+    throw new Error("Invalid input: Coordinates must be between 0 and 7.");
+    }
+
+    // possible moves from any given position positive numbers add, negative numbers subtract
     const moves = [
     [2 , 1],
     [-2 , 1],
