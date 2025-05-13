@@ -17,7 +17,7 @@ How it works:
 - This effectively checks all move paths to the target 1 "breadth" at a time (check 1 move paths, then 2 move paths, etc.)
 - While there are items in the queue, use shift to take the first element out (first in first out!)
 - If the current coordinates are the target coordinates, we immediately print the current path
-- While this is running however, we need to check the moves we can make and then push any valid moves into the queue so those positions can be checked as necessary.
+- While this is running however, we need to check the moves we can make and then push any valid move paths into the queue so those positions can be checked as necessary.
 
 4. Evaluate moves and add paths to queue as necessary
 - Create an array of the possible moves from the current position, this should generate 8 possible moves
