@@ -1,16 +1,4 @@
-/* legal moves between the nodes as the moves of the knight, assuming they do 
-not go beyond the bounds of the chessboard
-(x + 2, y + 1), 
-(x - 2, y + 1), 
-(x + 2, y - 1),
-(x - 2, y - 1),
-(x + 1, y + 2),
-(x - 1, y + 2),
-(x + 1, y - 2),
-(x - 1 , y - 2)
-*/
-
-// X/Y cannot be greater than 7 or less than 0. 
+// helper function that returns true if a given position is valid (not less than 0 or greater than 7) on the chessboard. 
 function isValidPosition(x, y) {
   return x >= 0 && x <= 7 && y >= 0 && y <= 7;
 }
@@ -23,15 +11,17 @@ function knightMoves([startX, startY], [targetX, targetY]) {
 
     // possible moves from any given position positive numbers add, negative numbers subtract
     const moves = [
-    [2 , 1],
-    [-2 , 1],
-    [2, -1],
-    [-2, -1],
-    [1, 2],
-    [-1, 2],
-    [1, -2],
-    [-1, -2]
+      [x + 2, y + 1], 
+      [x + 2, y - 1],
+      [x - 2, y + 1], 
+      [x - 2, y - 1],
+      [x + 1, y + 2], 
+      [x + 1, y - 2],
+      [x - 1, y + 2], 
+      [x - 1, y - 2]
     ];
+
+
 
 }
 
