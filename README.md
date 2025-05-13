@@ -11,7 +11,7 @@ How it works:
 
 2. Initialize a queue and a set
 - Need a queue to go through coordinates to check
-- Use a set to keep track of where we have moved to previously (avoids dupliactes)
+- Use a set to keep track of where we have moved to previously (avoids duplicates)
 
 3. Run a breadth first search
 - This effectively checks all move paths to the target 1 "breadth" at a time (check 1 move paths, then 2 move paths, etc.)
